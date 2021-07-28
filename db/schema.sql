@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS fanfic_db;
+CREATE DATABASE fanfic_db;
