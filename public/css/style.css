@@ -1,0 +1,79 @@
+.sign_in {
+  font-weight: bolder;
+  font-size: 50px;
+}
+.smallField {
+  margin-right: 20%;
+  margin-left: 20%;
+}
+
+.myHeader {
+  margin-bottom: 3%;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+}
+
+.myNav {
+  margin-bottom: 5%;
+}
+
+.myLogo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+}
+
+.darkMode {
+  background: #646669;
+}
+
+.myBigText {
+  font-size: xx-large;
+  color: #d8e2ed;
+  font-family: "Caveat", cursive;
+}
+
+.focalText {
+  font-size: 5rem;
+  color: #d8e2ed;
+  font-family: "Caveat", cursive;
+  letter-spacing: 0.1em;
+}
+
+.mainButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainButton {
+  margin-left: 2.5em;
+  margin-right: 2.5em;
+  margin-bottom: 10em;
+  margin-top: 1em;
+  background: #d8e2ed;
+  color: #484649;
+}
+.mainButton:hover {
+  background: #32197f;
+  border-color: #32197f;
+  color: #d8e2ed;
+  font-weight: bold;
+}
+.logo {
+  font-size: xx-large;
+  color: #d8e2ed;
+  font-family: "Caveat", cursive;
+}
+.hero-body {
+  padding-bottom: 0;
+}
+
+.myBackground {
+  background: url(purple\ clouds.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
