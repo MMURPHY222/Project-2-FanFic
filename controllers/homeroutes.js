@@ -9,7 +9,9 @@ router.get('/', withAuth, async (req, res) => {
             order: [['title', ASC]]
         });
 
-    } catch {
-        
+        const stories = storyData.map((story) => story.get({ plain: true }));
+
+    } catch (err) {
+        res.status(500).json(err);
     }
 })
