@@ -8,7 +8,7 @@
 //   try {
 //     // const categoryData = await Category.findAll();
 //     // res.status(200).json(categoryData);
-//     res.render('login', {variable: true});
+//     res.render('write-story', {variable: true});
 //   } catch (err) {
 //     res.status(500).json(err);
 //   }
