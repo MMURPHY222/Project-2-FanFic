@@ -10,16 +10,23 @@ router.post('/login', (req, res) => {
         if(!userData) {
             res
             .status(400)
-            .json({ message: 'Incorrect email or password, please try again' });
+            .json({ message: 'Incorrect email address or password entered. Please try again.' });
             return;
         }
 
         if (!validPassword) {
             res
             .status(400)
-            .json({ message: 'Incorrect email or password, please try again' });
+            .json({ message: 'Incorrect email address or password entered. Please try again.' });
             return;
         }
+
+        req.session.save(() => {
+            req.session.user_id = userData.id;
+            req.session.logged_in = true;
+            
+            res.json({ user: userData, message: 'You have successfully logged in. Enjoy!' });
+        });
 
     } catch (err) {
         res.status(400).json(err);
@@ -31,3 +38,5 @@ router.post('/logout', (req, res) => {
     ? req.session.destroy(() => res.status(204).end()) // If so, destroy the session to log them out
     : res.status(404).end(); // Otherwise, lead the user to a 404 page upon trying to access this route
 });
+
+module.exports = router;
