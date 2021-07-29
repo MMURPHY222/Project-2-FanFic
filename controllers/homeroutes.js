@@ -6,8 +6,7 @@ router.get('/', withAuth, async (req, res) => {
     try {
 
         const storyData = await Story.findAll({
-            attributes: { exclude: ['password'] },
-            order: [['name', ASC]]
+            order: [['title', ASC]]
         });
 
     } catch {
