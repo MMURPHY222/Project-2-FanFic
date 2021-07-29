@@ -1,9 +1,14 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { Story } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
     try {
+
+        const storyData = await Story.findAll({
+            attributes: { exclude: ['password'] },
+            order: [['name', ASC]]
+        });
 
     } catch {
         
