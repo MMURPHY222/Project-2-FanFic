@@ -1,0 +1,25 @@
+.smallField {
+  margin-right: 20%;
+  margin-left: 20%;
+}
+
+.myHeader {
+  margin-bottom: 3%;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+}
+
+.myNav {
+  margin-bottom: 5%;
+}
+
+.myLogo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+}
+
+.darkMode {
+  background: #646669;
+}
