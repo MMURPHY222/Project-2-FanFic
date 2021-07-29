@@ -1,5 +1,53 @@
-<h1>HELLO</h1>
+<nav class="navbar myNav" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+     <h1 class ="myLogo">OnlyFanFics</h1>
 
-{{#if variable}}
-<h2>We'll see</h2>
-{{/if}}
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item">
+        Home
+      </a>
+     
+      </div>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-primary">
+            <strong>Sign up</strong>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<h1 class="smallField myHeader">Sign In</h1>
+
+<div class="field smallField">
+  <label class="label">Username</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="e.g hanging_with_my_gnomies">
+  </div>
+</div>
+<div class="field smallField">
+  <label class="label">Password</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="Your Password">
+  </div>
+</div>
+<div class="field smallField">
+  <p class="control">
+    <button class="button is-success">
+      Login
+    </button>
+  </p>
+</div>
