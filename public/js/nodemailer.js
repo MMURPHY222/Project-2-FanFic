@@ -1,4 +1,5 @@
 const nodemailer = require('nodemailer');
+const path = require('path');
 require('dotenv').config({ path: path.resolve(__dirname, '../../.env') });
 
 const transporter = nodemailer.createTransport({
@@ -20,4 +21,4 @@ transporter.sendMail(options, (err, res) => {
     if (err) throw err;
 
     console.log("Email successfully sent: " + res.response);
-})
+});
