@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
   try {
     // const categoryData = await Category.findAll();
     // res.status(200).json(categoryData);
-    res.render('write-story', {variable: true});
+    res.render('view-stories', {variable: true});
   } catch (err) {
     res.status(500).json(err);
   }

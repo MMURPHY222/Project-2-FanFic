@@ -96,3 +96,14 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+
+.myMessage {
+    max-width: 80%;
+    margin: auto;
+}
+
+#myMessageBody {
+    border-bottom: #484649;
+    border-bottom-width: 3px;
+    border-style: solid;
+}
