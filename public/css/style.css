@@ -1,5 +1,9 @@
+html {
+  height: 100%;
+}
 body {
-    font-family: 'Cinzel Decorative', cursive;
+  font-family: "Cinzel Decorative", cursive;
+  min-height: 100%;
 }
 
 .sign_in {
@@ -7,10 +11,10 @@ body {
   font-size: 50px;
 }
 .newStory {
-    display: flex;
-    flex-direction: column;
-    justify-content:left;
-    margin: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin: 10%;
 }
 .smallField {
   margin-right: 20%;
@@ -18,8 +22,8 @@ body {
 }
 
 .largeField {
-    font-size: 4em;
-    text-align: center;
+  font-size: 4em;
+  text-align: center;
 }
 
 .myHeader {
@@ -40,7 +44,7 @@ body {
 }
 
 .myTextarea {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .darkMode {
@@ -90,9 +94,20 @@ body {
 }
 
 .myBackground {
-  background: url(purple\ clouds.jpg) no-repeat center center fixed;
+  background: url(/img/purple\ clouds.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.myMessage {
+  max-width: 80%;
+  margin: auto;
+}
+
+#myMessageBody {
+  border-bottom: #484649;
+  border-bottom-width: 3px;
+  border-style: solid;
 }
