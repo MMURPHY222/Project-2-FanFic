@@ -10,7 +10,7 @@ router.get('/signup', (req, res) => {
     res.render('signup')
 });
 
-router.get('/writestory', (req, res) => {
+router.get('/writestory', withAuth, (req, res) => {
     res.render('write-story')
 });
 
@@ -35,7 +35,7 @@ router.get('/writestory', (req, res) => {
 //     }
 // })
 
-router.get('/stories', async (req, res) => {
+router.get('/stories', withAuth, async (req, res) => {
   try {
     // Get all stories and JOIN with user data
     const storyData = await Story.findAll({
@@ -60,7 +60,7 @@ router.get('/stories', async (req, res) => {
   }
 });
 
-router.get('/story/:id', async (req, res) => {
+router.get('/story/:id', withAuth, async (req, res) => {
   try {
     const storyData = await Story.findByPk(req.params.id, {
       include: [
@@ -87,7 +87,7 @@ router.get('/story/:id', async (req, res) => {
 });
 
 // Use withAuth middleware to prevent access to route
-router.get('/profile', async (req, res) => {
+router.get('/profile', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
