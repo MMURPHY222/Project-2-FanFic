@@ -6,6 +6,14 @@ router.get('/', (req, res) => {
     res.render('home')
 });
 
+router.get('/signup', (req, res) => {
+    res.render('signup')
+});
+
+router.get('/writestory', (req, res) => {
+    res.render('write-story')
+});
+
 // router.get('/', async (req, res) => {
 //     try {
 
@@ -34,7 +42,7 @@ router.get('/stories', async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['username'],
+          attributes: ['user_name'],
         },
       ],
     });
@@ -58,7 +66,7 @@ router.get('/story/:id', async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['username'],
+          attributes: ['user_name'],
         },
         {
           model: Comment,
