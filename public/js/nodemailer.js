@@ -3,7 +3,7 @@ const path = require('path');
 require('dotenv').config({ path: path.resolve(__dirname, '../../.env') });
 
 const transporter = nodemailer.createTransport({
-    service: "hotmail",
+    service: "gmail",
     auth: {
         user: process.env.EM_EMAIL,
         pass: process.env.EM_PASS
@@ -17,8 +17,9 @@ const options = {
     text: "Hopefully this works!"
 }
 
-transporter.sendMail(options, (err, res) => {
-    if (err) throw err;
+transporter.sendMail(options, (err, info) => {
+    if (err) console.log(err);
+    console.log(info);
 
-    console.log("Email successfully sent: " + res.response);
+    console.log("Email successfully sent: " + info?.response);
 });
