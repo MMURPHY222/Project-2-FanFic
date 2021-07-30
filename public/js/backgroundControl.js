@@ -7,7 +7,7 @@ const backgrounds = ['https://wallpapercave.com/wp/QGuGTRV.jpg', 'https://wallpa
 document.body.style.backgroundImage = `url(${backgrounds[1]})`
 document.body.style.backgroundSize = 'cover'
 let i = 1
-
+if (window.location.pathname === '/profile' || window.location.pathname === '/story' || window.location.pathname === '/stories' || window.location.pathname === '/writestory'){
 toggle.addEventListener('click', (event) => {
     document.body.style.backgroundImage = `url(${backgrounds[i]})`
     if(i === (backgrounds.length - 1)) {
@@ -16,3 +16,4 @@ toggle.addEventListener('click', (event) => {
         return i++;
     }
 })
+}
