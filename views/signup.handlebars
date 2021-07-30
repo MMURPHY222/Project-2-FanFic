@@ -60,31 +60,33 @@
 <div>
     <h1 class = "smallField myHeader">Enter the Following to Sign Up</h1>
 </div>
- 
+<form class="signup-form">
 <div class="field smallField">
     <label class="label">Username</label>
     <div class="control">
-      <input class="input" type="text" placeholder="e.g Jung3005">
+      <input class="input" id="username-signup" type="text" placeholder="e.g Jung3005">
     </div>
   </div>
   
   <div class="field smallField">
     <label class="label">Email</label>
     <div class="control">
-      <input class="input" type="email" placeholder="e.g. furry999@hotmail.com">
+      <input class="input" id="email-signup" type="email" placeholder="e.g. furry999@hotmail.com">
     </div>
   </div>
   
   <div class="field smallField">
     <label class="label">Password</label>
     <div class="control">
-      <input class="input" type="password">
+      <input class="input" id="password-signup" type="password">
     </div>
   </div>
 
   <div class="field is-grouped smallField">
     <div class="control">
-      <button class="button is-link is-light">Submit</button>
+      <button class="button is-link is-light" type="submit">Submit</button>
     </div>
   </div>
 </section>
+</form>
+<script src="/js/signup.js"></script>
