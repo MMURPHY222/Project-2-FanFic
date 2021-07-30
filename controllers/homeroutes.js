@@ -40,6 +40,7 @@ router.get('/stories', withAuth, async (req, res) => {
     // Get all stories and JOIN with user data
     const storyData = await Story.findAll({
       include: [
+        User,
         {
           model: User,
           attributes: ['user_name'],
@@ -64,13 +65,10 @@ router.get('/story/:id', withAuth, async (req, res) => {
   try {
     const storyData = await Story.findByPk(req.params.id, {
       include: [
-        {
-          model: User,
-          attributes: ['user_name'],
-        },
+        User,
         {
           model: Comment,
-          attributes: ['comment_body', 'user_id']
+          include: [User],
         },
       ],
     });
