@@ -4,13 +4,13 @@ const { User } = require('../../models');
 router.post('/login', async (req, res) => {
     try {
 
-        const userData = await User.findOne({ where: { email: req.body.email } }); // Searches for user by target email
+        const userData = await User.findOne({ where: { user_name: req.body.username } }); // Searches for user by target email
         const validPassword = await userData.checkPassword(req.body.password); // Pass check dependent on user data
 
         if(!userData) {
             res
             .status(400)
-            .json({ message: 'Incorrect email address or password entered. Please try again.' });
+            .json({ message: 'Incorrect username or password entered. Please try again.' });
             return;
         }
 

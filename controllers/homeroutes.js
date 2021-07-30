@@ -97,10 +97,7 @@ router.get('/profile', async (req, res) => {
 
     const user = userData.get({ plain: true });
 
-    res.render('profile', {
-      ...user,
-      logged_in: true
-    });
+    res.render('profile');
   } catch (err) {
     res.status(500).json(err);
   }
