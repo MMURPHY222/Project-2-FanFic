@@ -31,23 +31,25 @@
 </nav>
 
 <h1 class="smallField myHeader">Sign In</h1>
-
+<form class="login-form">
 <div class="field smallField">
   <label class="label">Username</label>
   <div class="control">
-    <input class="input" type="text" placeholder="e.g hanging_with_my_gnomies">
+    <input class="input" id="username-login" type="text" placeholder="e.g hanging_with_my_gnomies">
   </div>
 </div>
 <div class="field smallField">
   <label class="label">Password</label>
   <div class="control">
-    <input class="input" type="password" placeholder="Your Password">
+    <input class="input" id="password-login" type="text" placeholder="Your Password">
   </div>
 </div>
 <div class="field smallField">
   <p class="control">
-    <button class="button is-success">
+    <button class="button is-success" type="submit">
       Login
     </button>
   </p>
 </div>
+</form>
+<script src="/js/login.js"></script>
