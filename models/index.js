@@ -34,9 +34,3 @@ module.exports = {
     Story,
     Comment
 };
-
-// const Category = require('./Category');
-
-// module.exports = {
-//     Category,
-// };
