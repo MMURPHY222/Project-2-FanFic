@@ -2,24 +2,25 @@ const router = require('express').Router();
 const { User } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', async (req, res) => {
-    // try {
+router.get('/', withAuth, async (req, res) => {
+    try {
 
-    //     const userData = await User.findAll({
-    //         attributes: { exclude: ['password'] },
-    //         order: [['name', ASC]]
-    //     });
+        const userData = await User.findAll({
+            attributes: { exclude: ['password'] },
+            // order: [['user_name', ASC]]
+        });
 
-    //     const users = userData.map((user) => user.get({ plain: true }));
+        const users = userData.map((user) => user.get({ plain: true }));
 
-        res.render('home' // add comma and braces to push the below object to the page
-    //         users,
-    //         logged_in: req.session.logged_in, // Gives homepage template logged_in status
-        );
+        res.render('home', {
+            users,
+            logged_in: req.session.logged_in
+        }); // Gives homepage template users to work with and logged_in status
+        
 
-    // } catch (err) {
-    //     res.status(500).json(err);
-    // }
+    } catch (err) {
+        res.status(500).json(err);
+    }
 })
 
 router.get('/login', (req, res) => 
