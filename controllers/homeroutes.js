@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
 
     //     const users = userData.map((user) => user.get({ plain: true }));
 
-        res.render('write-story' // add comma and braces to push the below object to the page
+        res.render('story' // add comma and braces to push the below object to the page
     //         users,
     //         logged_in: req.session.logged_in, // Gives homepage template logged_in status
         );
