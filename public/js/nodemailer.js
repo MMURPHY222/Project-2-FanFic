@@ -15,3 +15,9 @@ const options = {
     subject: "This is a test email from Node JS.",
     text: "Hopefully this works!"
 }
+
+transporter.sendMail(options, (err, res) => {
+    if (err) throw err;
+
+    console.log("Email successfully sent: " + res.response);
+})
