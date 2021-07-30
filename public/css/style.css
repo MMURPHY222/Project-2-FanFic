@@ -113,3 +113,67 @@ body {
   border-bottom-width: 3px;
   border-style: solid;
 }
+
+.myOtherNav {
+  margin-bottom: 0;
+}
+
+.profilePhoto {
+  background: linear-gradient(
+    to bottom right,
+    #b8b8b8,
+    #8c8c8c,
+    #adadad,
+    #2e2e2e
+  );
+  border: solid 5px
+    linear-gradient(to bottom right, #b8b8b8, #8c8c8c, #adadad, #2e2e2e);
+  border-radius: 50%;
+  width: 20%;
+  height: 14em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  margin-top: 0;
+  transform: translateY(50%);
+  color: black;
+  font-weight: bold;
+}
+
+.heroText p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.subtitle {
+  color: black;
+}
+
+.userInfo {
+  background: lightgray;
+  color: black;
+  left: 0;
+  height: 7em;
+}
+
+.userInfo h1 {
+  margin-left: 21%;
+}
+
+.userInfo p {
+  padding-top: 5%;
+  margin-left: 21%;
+}
+
+#profileStory {
+  margin-right: 10%;
+  margin-left: 10%;
+  padding: 3em;
+  background: lightgrey;
+  border: solid 5px lightgrey;
+  border-radius: 1em;
+  margin-top: 5%;
+}
