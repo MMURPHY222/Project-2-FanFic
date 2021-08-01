@@ -32,7 +32,7 @@ router.get('/stories', withAuth, async (req, res) => {
     // Pass serialized data and session flag into template
     res.render('view-stories', { 
       stories, 
-    //   logged_in: req.session.logged_in 
+      logged_in: req.session.logged_in 
     });
   } catch (err) {
     res.status(500).json(err);
@@ -52,10 +52,9 @@ router.get('/story/:id', withAuth, async (req, res) => {
     });
 
     const story = storyData.get({ plain: true });
-    console.log(story.comments[0].user)
     res.render('story', {
       ...story,
-    //   logged_in: req.session.logged_in
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
