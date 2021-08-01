@@ -52,10 +52,6 @@ router.get('/story/:id', withAuth, async (req, res) => {
     });
 
     const story = storyData.get({ plain: true });
-<<<<<<< HEAD
-    
-=======
->>>>>>> b366b548e41b4fe402c6acead8a778abfce912d6
     res.render('story', {
       ...story,
       logged_in: req.session.logged_in
