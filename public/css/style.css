@@ -28,9 +28,9 @@ body {
 
 .myHeader {
   margin-bottom: 3%;
-  font-weight: bold;
+  font-weight: bolder;
   letter-spacing: 0.2em;
-  color: #828385;
+  color: black;
 }
 
 .myNav {
@@ -103,14 +103,14 @@ body {
   background-size: cover;
 }
 .myStoryContainer {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .myMessage {
-    width: 30%;
-    height: 12em;
+  width: 30%;
+  height: 12em;
   margin: 5%;
 }
 
@@ -203,9 +203,13 @@ body {
   margin-right: 5px;
 }
 .submit-button {
-    margin-top: 5px;
-    margin-bottom: -10px;
+  margin-top: 5px;
+  margin-bottom: -10px;
 }
 .myCommentBody {
-    width:fit-content;
+  width: fit-content;
+}
+
+#writeStory {
+  margin-bottom: 3em;
 }
