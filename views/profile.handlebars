@@ -19,8 +19,8 @@
             <a class="navbar-item" href="/stories">
               View Stories
             </a>
-            <a class="navbar-item" href="/profile">
-              My Profile
+            <a class="navbar-item" href="/write-story">
+              Write Story
             </a>
             </div>
           </div>
@@ -45,13 +45,13 @@
         
           <section class="hero is-medium" id = "background">
             <div class = "profilePhoto">
-                Profile Photo
+                <img id = "profileImg"src = "https://i.pinimg.com/564x/3d/fd/d3/3dfdd3cce72f6d62c17d4fa2c595d6c9.jpg" >
             </div>
          </section>
          <div class = "userInfo">
-            <h1 class = "userNameProfile">Username: </h1>
+            <h1 class = "userNameProfile">Username: {{user_name}}</h1>
             <div>
-            <p>Number of Posts: </p>
+             <a class="button is-dark" id = "toggleProfile">Profile Pic</a>
             </div>
          </div>
          <div id = "profileStory">
@@ -70,3 +70,4 @@
       </div>
     </section>
     <script src="/js/logout.js"></script>
+    <script src = "/js/profileControl.js"></script>
