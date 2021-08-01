@@ -104,14 +104,9 @@ body {
 }
 
 .myMessage {
+    width: fit-content;
   max-width: 80%;
-  margin: auto;
-}
-
-#myMessageBody {
-  border-bottom: #484649;
-  border-bottom-width: 3px;
-  border-style: solid;
+  margin-left: 6em;
 }
 
 .myOtherNav {
@@ -191,7 +186,8 @@ body {
   margin: 10px;
 }
 #message-story {
-  padding-bottom: 20px;
+  padding-bottom: 15px;
+  margin-bottom: 4em;
 }
 .myButton {
   margin-left: 3em;
@@ -200,4 +196,11 @@ body {
   font-size: 2em;
   margin-left: -5px;
   margin-right: 5px;
+}
+.submit-button {
+    margin-top: 5px;
+    margin-bottom: -10px;
+}
+.myCommentBody {
+    width:fit-content;
 }
