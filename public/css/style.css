@@ -177,3 +177,20 @@ body {
   border-radius: 1em;
   margin-top: 5%;
 }
+.comments {
+    background-color: rgba(182, 174, 174,.8);
+}
+.commentBody {
+    background-color: #8c928a;
+    color: azure;
+}
+#stories-story {
+    text-decoration: none;
+}
+.commentInput {
+    margin: 10px;
+}
+#message-story {
+    padding-bottom: 20px;
+}
+ 

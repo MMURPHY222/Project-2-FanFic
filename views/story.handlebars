@@ -12,7 +12,7 @@
       
         <div id="navbarBasicExample" class="navbar-menu" href="/">
           <div class="navbar-start">
-            <a class="navbar-item">
+            <a class="navbar-item" href="/">
               Home
             </a>
       
@@ -28,7 +28,7 @@
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="buttons">
-                <a class="button is-light">
+                <a class="button is-light" href="/logout">
                   Log Out
                 </a>
                 <a class ="button is-light" id = "toggle">
@@ -39,30 +39,28 @@
           </div>
         </div>
       </nav>
+      </section>
 
-          <div class = "storyTitle">
-              STORY TITLE
+           <article class="message myMessage" id="message-story">
+  <div class="message-header">
+    <p id="story-username"><div class = "storyTitle">
+              {{title}}
+          </div></p>
+    {{!-- <button class="delete" aria-label="delete"></button> --}}
+    </div>
+  <div class="message-body" id="myMessageBody">
+      
+     <div id = "centerStory">
+                {{story_content}}
+                <p>by <strong>{{user.user_name}}</strong></p>
           </div>
-
-          <div id = "centerStory">
-                'Hi my name is Ebony Dark’ness Dementia Raven Way and I have long ebony black hair 
-                (that’s how I got my name) with purple streaks and red tips that reaches my mid-back and 
-                icy blue eyes like limpid tears and a lot of people tell me I look like Amy Lee (AN: if u 
-                don’t know who she is get da hell out of here!). I’m not related to Gerard Way but I wish I 
-                was because he’s a major ******* hottie. I’m a vampire but my teeth are straight and white. 
-                I have pale white skin. I’m also a witch, and I go to a magic school called Hogwarts in 
-                England where I’m in the seventh year (I’m seventeen). I’m a goth (in case you couldn’t tell) 
-                nd I wear mostly black. I love Hot Topic and I buy all my clothes from there. For example today 
-                I was wearing a black corset with matching lace around it and a black leather miniskirt, pink 
-                fishnets and black combat boots. I was wearing black lipstick, white foundation, black eyeliner 
-                and red eye shadow. I was walking outside Hogwarts. It was snowing and raining so there was no 
-                sun, which I was very happy about. A lot of preps stared at me. I put up my middle finger at them.'
-          </div>
-
-          <div class = "comments">
-            <h1>Username</h1>
-            <p>'Omg omg omg this is like my FAVORITE story of all time. I want to be herrrrr! ;-;'</p>
-          </div>
+  </div>
+  <div class="comment-container">
+    {{#each comments as |comment|}}
+    {{>comments-details}}
+    {{/each}}
+  </div>
+ 
             
           <section class = "commentInput">
             <p>
@@ -73,6 +71,8 @@
                 <textarea class="textarea" placeholder="e.g. Hello world"></textarea>
                 </form>
             </div>
+  </div>
           </section>
-          
-    </section>
+  </article>
+
+     
