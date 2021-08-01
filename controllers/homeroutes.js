@@ -50,7 +50,7 @@ router.get('/stories', withAuth, async (req, res) => {
 
     // Serialize data so the template can read it
     const stories = storyData.map((story) => story.get({ plain: true }));
-
+    
     // Pass serialized data and session flag into template
     res.render('view-stories', { 
       stories, 
@@ -74,7 +74,7 @@ router.get('/story/:id', withAuth, async (req, res) => {
     });
 
     const story = storyData.get({ plain: true });
-
+    console.log(story.comments[0].user)
     res.render('story', {
       ...story,
     //   logged_in: req.session.logged_in
