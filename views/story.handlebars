@@ -55,24 +55,26 @@
                 <p>by <strong>{{user.user_name}}</strong></p>
           </div>
   </div>
+
   <div class="comment-container">
     {{#each comments as |comment|}}
     {{>comments-details}}
     {{/each}}
   </div>
  
-            
+           
           <section class = "commentInput">
             <p>
                 Leave a Comment
             </p>
             <div class = "textInput">
-                <form>
-                <textarea class="textarea" placeholder="e.g. Hello world"></textarea>
+                <form class="comment-form">
+                <input id="comment-body" class="textarea" placeholder="e.g. Hello world"></input>
+                <button type="submit">Submit</button>
                 </form>
             </div>
   </div>
           </section>
   </article>
-
+<script src="/js/writeComment.js"></script>
      
