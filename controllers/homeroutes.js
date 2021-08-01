@@ -14,33 +14,11 @@ router.get('/writestory', withAuth, (req, res) => {
     res.render('write-story')
 });
 
-// router.get('/', async (req, res) => {
-//     try {
-
-//         const userData = await User.findAll({
-//             attributes: { exclude: ['password'] },
-//             // order: [['user_name', ASC]]
-//         });
-
-//         const users = userData.map((user) => user.get({ plain: true }));
-
-//         res.render('home', {
-//             users,
-//             logged_in: req.session.logged_in
-//         }); // Gives homepage template users to work with and logged_in status
-        
-
-//     } catch (err) {
-//         res.status(500).json(err);
-//     }
-// })
-
 router.get('/stories', withAuth, async (req, res) => {
   try {
     // Get all stories and JOIN with user data
     const storyData = await Story.findAll({
       include: [
-        User,
         {
           model: User,
           attributes: ['user_name'],
