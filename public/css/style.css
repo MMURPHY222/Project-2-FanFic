@@ -102,11 +102,16 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+.myStoryContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
 
 .myMessage {
-    width: fit-content;
-  max-width: 80%;
-  margin-left: 6em;
+    width: 30%;
+    height: 12em;
+  margin: 5%;
 }
 
 .myOtherNav {
