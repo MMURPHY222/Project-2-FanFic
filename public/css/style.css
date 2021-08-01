@@ -178,19 +178,26 @@ body {
   margin-top: 5%;
 }
 .comments {
-    background-color: rgba(182, 174, 174,.8);
+  background-color: rgba(182, 174, 174, 0.8);
 }
 .commentBody {
-    background-color: #8c928a;
-    color: azure;
+  background-color: #8c928a;
+  color: azure;
 }
 #stories-story {
-    text-decoration: none;
+  text-decoration: none;
 }
 .commentInput {
-    margin: 10px;
+  margin: 10px;
 }
 #message-story {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
- 
+.myButton {
+  margin-left: 3em;
+}
+#plus {
+  font-size: 2em;
+  margin-left: -5px;
+  margin-right: 5px;
+}
