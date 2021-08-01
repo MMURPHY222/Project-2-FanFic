@@ -1,7 +1,7 @@
 let toggle = document.querySelector("#toggle");
 let background = document.querySelector("#background");
 let nav = document.querySelector("#navId");
-console.log('working')
+
 const backgrounds = [
   "https://wallpapercave.com/wp/QGuGTRV.jpg",
   "https://wallpaperaccess.com/full/1141048.jpg",

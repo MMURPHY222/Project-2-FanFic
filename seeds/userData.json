@@ -1,20 +1,24 @@
 [
     {
+        "id": 1,
         "user_name": "PotterFanXOXO",
         "email": "harrynherm@potter.com",
         "password": "potterhead00"
     },
     {
+        "id": 2,
         "user_name": "KHearts4Eva",
         "email": "sora@keyblade.com",
         "password": "goofyrox1"
     },
     {
+        "id": 3,
         "user_name": "ThorIzCool",
         "email": "avengers@marvel.com",
         "password": "godofthunder"
     },
     {
+        "id": 4,
         "user_name": "Pokemanz",
         "email": "yellowmouse@pikachu.com",
         "password": "catchemall"
