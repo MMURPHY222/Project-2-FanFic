@@ -30,7 +30,10 @@ body {
   margin-bottom: 3%;
   font-weight: bolder;
   letter-spacing: 0.2em;
-  color: black;
+  background-color: rgba(182, 174, 174, 0.8);
+  color: #fcf4eb;
+  border: 1px solid rgba(182, 174, 174, 0.8);
+  border-radius: 1em;
 }
 
 .myNav {

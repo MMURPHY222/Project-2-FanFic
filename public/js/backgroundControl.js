@@ -4,8 +4,10 @@ let nav = document.querySelector("#navId");
 
 const backgrounds = [
   "https://wallpapercave.com/wp/QGuGTRV.jpg",
-  "https://wallpaperaccess.com/full/1141048.jpg",
   "https://wallpapercave.com/wp/eN43jqu.jpg",
+  "https://wallpapercave.com/uwp/uwp781092.jpeg",
+  "https://wallpapercave.com/wp/wp1814938.jpg",
+  "https://wallpapercave.com/uwp/uwp433012.jpeg"
 ];
 // let isLight = true;
 document.body.style.backgroundImage = `url(${backgrounds[1]})`;
