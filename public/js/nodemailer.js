@@ -1,8 +1,10 @@
 const nodemailer = require('nodemailer');
-const path = require('path');
-require('dotenv').config({ path: path.resolve(__dirname, '../../.env') });
+// const path = require('path');
+// require('dotenv').config({ path: path.resolve(__dirname, '../../.env') });
 
 const signupForm = document.querySelector(".signup-form");
+const userName = document.querySelector('#username-signup').value.trim();
+const userEmail = document.querySelector('#email-signup').value.trim();
 
 const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -14,17 +16,19 @@ const transporter = nodemailer.createTransport({
 
 const options = {
     from: "onlyfanficsgt@gmail.com",
-    to: process.env.TEST_EMAIL,
-    subject: "Welcome {USER}",
-    text: "Dear {USER},\n\nYou have successfully signed up for OnlyFanFics!\n\nWe look forward to having you in our community!\n\nYours Sincerely,\nThe OnlyFanFics Team"
+    to: `${userEmail}`,
+    subject: `Welcome ${userName}`,
+    text: `Dear ${userName},\n\nYou have successfully signed up for OnlyFanFics!\n\nWe look forward to having you in our community!\n\nYours Sincerely,\nThe OnlyFanFics Team`
 }
 
 signupForm.addEventListener("submit", event => {
+
     event.stopPropagation();
+
     transporter.sendMail(options, (err, info) => {
         if (err) console.log(err);
-        console.log(info);
-    
+        
         console.log("Email successfully sent: " + info?.response);
     });
-})
+
+});
