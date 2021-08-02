@@ -2,7 +2,7 @@ const nodemailer = require('nodemailer');
 const path = require('path');
 require('dotenv').config({ path: path.resolve(__dirname, '../../.env') });
 
-const signupForm = document.querySelector("#signup-form");
+const signupForm = document.querySelector(".signup-form");
 
 const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -19,14 +19,12 @@ const options = {
     text: "Dear {USER},\n\nYou have successfully signed up for OnlyFanFics!\n\nWe look forward to having you in our community!\n\nYours Sincerely,\nThe OnlyFanFics Team"
 }
 
-transporter.sendMail(options, (err, info) => {
-    if (err) console.log(err);
-    console.log(info);
-
-    console.log("Email successfully sent: " + info?.response);
-});
-
 signupForm.addEventListener("submit", event => {
     event.stopPropagation();
-    console.log("You have successfully signed up for an account");
+    transporter.sendMail(options, (err, info) => {
+        if (err) console.log(err);
+        console.log(info);
+    
+        console.log("Email successfully sent: " + info?.response);
+    });
 })
