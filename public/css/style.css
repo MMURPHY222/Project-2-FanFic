@@ -16,6 +16,11 @@ body {
   justify-content: left;
   margin: 10%;
 }
+
+.summary-txt {
+  overflow: hidden;
+  height:fit-content;
+}
 .smallField {
   margin-right: 20%;
   margin-left: 20%;
@@ -116,7 +121,7 @@ body {
 
 .myMessage {
   width: 30%;
-  height: 12em;
+  height: fit-content;
   margin: 5%;
 }
 
