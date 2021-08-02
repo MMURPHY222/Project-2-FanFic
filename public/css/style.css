@@ -234,3 +234,7 @@ body {
   border-bottom-width: 2px;
   padding-bottom: 5px;
 }
+#login-submit {
+  font-family: "Cinzel Decorative", cursive;
+  font-weight: 700;
+}
