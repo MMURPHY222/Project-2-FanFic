@@ -2,7 +2,8 @@ const router = require('express').Router();
 const { Story } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.post('/', async (req, res) => {
+// route to post new story to database with appropriate foreign key
+router.post('/', withAuth, async (req, res) => {
   try {
     const newStory = await Story.create({
       ...req.body,
@@ -15,4 +16,5 @@ router.post('/', async (req, res) => {
   }
 });
 
+// export for index
 module.exports = router;
