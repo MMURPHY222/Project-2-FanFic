@@ -96,6 +96,7 @@ body {
   border-color: #32197f;
   color: #d8e2ed;
   font-weight: bold;
+  transition: .3s;
 }
 .logo {
   font-size: xx-large;
@@ -242,4 +243,9 @@ body {
 #login-submit {
   font-family: "Cinzel Decorative", cursive;
   font-weight: 700;
+}
+#myNewStory:hover {
+  background-color: rgb(228, 228, 228);
+  color: #2e2e2e;
+  transition: .3s;
 }
