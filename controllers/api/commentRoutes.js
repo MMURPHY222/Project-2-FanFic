@@ -2,7 +2,8 @@ const router = require('express').Router();
 const { Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.post('/story/:id', async (req, res) => {
+// route to post new comment to the databse with appropriate foreign keys
+router.post('/story/:id', withAuth, async (req, res) => {
   try {
     const newComment = await Comment.create({
       ...req.body,
@@ -16,5 +17,5 @@ router.post('/story/:id', async (req, res) => {
   }
 });
 
-
+// export for index
 module.exports = router;
