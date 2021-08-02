@@ -33,6 +33,9 @@ chatForm.addEventListener("submit", event => {
 
 enterButton.addEventListener("click", () => {
     const session = sessionInput.value;
+    socket.emit('join-session', session, chatMessage => {
+        displayChat(chatMessage)
+    });
 });
 
 const displayChat = chatMessage => {

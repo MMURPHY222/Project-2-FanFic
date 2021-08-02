@@ -6,6 +6,7 @@ const routes = require('./controllers');
 const helpers = require('./utils/helpers');
 
 const sequelize = require('./config/connection');
+const { callbackPromise } = require('nodemailer/lib/shared');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
@@ -18,9 +19,16 @@ const io = require('socket.io')(3001, {
 });
 
 io.on('connection', socket => {
-  console.log(socket.id);
-  socket.on('send-message',chatMessage => {
-    socket.broadcast.emit('recieve-message', chat);
+  
+  socket.on('send-message',(chatMessage, room) => {
+    room === "" 
+    ? socket.broadcast.emit('recieve-message', chat)
+    : socket.to(room);
+  });
+
+  socket.on('join-session', (session, callBack) => {
+    socket.join(session);
+    callBack(`Joined ${session}`);
   })
 });
 
