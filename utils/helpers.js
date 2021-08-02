@@ -5,4 +5,15 @@ const chatForm = document.querySelector("chat-form");
 
 chatForm.addEventListener("submit", event => {
     event.preventDefault();
-})
+
+    const chat = chatInput.value;
+    const session = sessionInput.value;
+
+    if (chat == "") {
+        return;
+    } else {
+        displayChat(chat);
+    }
+
+    chatInput.value = "";
+});
