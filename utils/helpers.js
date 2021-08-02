@@ -17,3 +17,7 @@ chatForm.addEventListener("submit", event => {
 
     chatInput.value = "";
 });
+
+enterButton.addEventListener("click", () => {
+    const session = sessionInput.value;
+});
