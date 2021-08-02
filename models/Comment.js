@@ -1,8 +1,8 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-
+// extending sequelize Model
 class Comment extends Model {}
-
+// creating column parameters for comment table
 Comment.init(
   {
     id: {
@@ -38,5 +38,5 @@ Comment.init(
     modelName: 'comment',
   }
 );
-
+// export for index
 module.exports = Comment;
