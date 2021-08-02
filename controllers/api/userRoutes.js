@@ -1,13 +1,13 @@
 const router = require("express").Router();
 const { User } = require("../../models");
 
-// route posting new user data to server for sign-up
+// route posting new user data to server for sign-up - includes nodemailer app to send welcome email
 router.post("/signup", async (req, res) => {
   try {
     console.log(req.body);
     
     const nodemailer = require('nodemailer');
-
+    // setting up email origin
     const transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
@@ -15,7 +15,7 @@ router.post("/signup", async (req, res) => {
             pass: "!Pass12345"
         }
     });
-
+    // personalized message and user email address 
     const options = {
         from: "onlyfanficsgt@gmail.com",
         to: `${req.body.email}`,
