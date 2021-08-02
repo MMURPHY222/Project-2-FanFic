@@ -10,7 +10,6 @@ router.post('/', async (req, res) => {
     });
 
     res.status(200).json(newStory);
-    console.log(newStory);
   } catch (err) {
     res.status(400).json(err);
   }
