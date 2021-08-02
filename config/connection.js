@@ -1,9 +1,9 @@
 const Sequelize = require('sequelize');
 const path = require('path')
 require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
-
+// create variable
 let sequelize;
-
+// connection process referencing .env file to access server
 if (process.env.JAWSDB_URL) {
   sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {
@@ -18,5 +18,5 @@ if (process.env.JAWSDB_URL) {
     }
   );
 }
-
+// export for server
 module.exports = sequelize;

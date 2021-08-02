@@ -1,7 +1,7 @@
 const User = require('./User');
 const Story = require('./Story');
 const Comment = require('./Comment');
-
+// defining relationships between User, Story, and Comment tables
 User.hasMany(Story, {
     foreignKey: 'user_id',
     onDelete: 'CASCADE'
@@ -28,7 +28,7 @@ Comment.belongsTo(Story, {
 Comment.belongsTo(User, {
     foreignKey: 'user_id'
 });
-
+// export for use
 module.exports = {
     User,
     Story,

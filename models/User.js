@@ -1,13 +1,13 @@
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
-
+// extending sequelize model and using bcrypt in order to check the input password using bcrypt to unhash
 class User extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
-
+// defining columns for user table
 User.init(
   {
     id: {
@@ -36,6 +36,7 @@ User.init(
       },
     },
   },
+  // adding hooks so that input passwords are hashed before being sent to database
   {
     hooks: {
       beforeCreate: async (newUserData) => {
@@ -54,5 +55,5 @@ User.init(
     modelName: 'user',
   }
 );
-
+// export for index
 module.exports = User;
