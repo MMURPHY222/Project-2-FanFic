@@ -1,6 +1,6 @@
 let profile = document.querySelector("#profileImg");
 let profileBtn = document.querySelector("#toggleProfile");
-
+// stored profile pictures
 const profileImgs = [
   "https://i.pinimg.com/564x/3d/fd/d3/3dfdd3cce72f6d62c17d4fa2c595d6c9.jpg",
   "https://wallpapercave.com/uwp/uwp438081.jpeg",
@@ -8,17 +8,18 @@ const profileImgs = [
   "https://www.naruto-guides.com/wp-content/uploads/2019/05/naruto-uzumaki.jpg",
   "https://cbsnews1.cbsistatic.com/hub/i/r/2015/06/09/56a5c461-f85d-4622-b021-f6f20a3618bc/thumbnail/1200x630/cbd370c5256b07b5f42fef1db1f841b7/ppgkeyartpr2016.jpg"
 ]
+// creating c value
 let c = 1
+// checking to make script only work on profile page
 if (
   window.location.pathname === "/profile"
 ) {
+  // toggles background image when event activated
   profileBtn.addEventListener("click", (event) => {
     profile.src =  `${profileImgs[c]}`;
     if (c === profileImgs.length - 1) {
-      localStorage.setItem("savedC", JSON.stringify(c))
       return (c = 0);
     } else {
-      localStorage.setItem("savedC", JSON.stringify(c))
       return c++;
     }
   });
