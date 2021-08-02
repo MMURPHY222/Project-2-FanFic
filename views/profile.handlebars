@@ -1,4 +1,5 @@
 <section id = "background">
+    {{!-- Navbar starts --}}
     <nav class="navbar myNav" id = "navId" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
          <h1 class ="myLogo">OnlyFanFics</h1>
@@ -9,7 +10,7 @@
             <span aria-hidden="true"></span>
           </a>
         </div>
-      
+    
         <div id="navbarBasicExample" class="navbar-menu">
           <div class="navbar-start">
             <a class="navbar-item" href="/">
@@ -37,10 +38,11 @@
           </div>
         </div>
       </nav>
+      {{!-- Navbar ends --}}
 
 
 
-        
+        {{!-- Profile header --}}
           <section class="hero is-medium" id = "background">
             <div class = "profilePhoto">
                 <img id = "profileImg" src = "https://i.pinimg.com/564x/3d/fd/d3/3dfdd3cce72f6d62c17d4fa2c595d6c9.jpg" >
@@ -52,11 +54,13 @@
              <a class="button is-dark" id = "toggleProfile">Profile Pic</a>
             </div>
          </div>
+         {{!-- User stories from database --}}
 <div class="story-container myStoryContainer">
   {{#each stories as |story|}}
   {{>stories-profile-details}}
   {{/each}}
 </div>
     </section>
+    {{!-- fetch call for logout file link --}}
     <script src="/js/logout.js"></script>
     
