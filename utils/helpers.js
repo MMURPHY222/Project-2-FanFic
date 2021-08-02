@@ -1,7 +1,5 @@
 // const { io } = require("socket.io-client");
 
-const { Socket } = require("socket.io-client");
-
 const enterButton = document.querySelector("#enter-button");
 const chatInput = document.querySelector("#chat-input");
 const sessionInput = document.querySelector("#session-input");
@@ -11,9 +9,9 @@ const chatForm = document.querySelector("#chat-form");
 
 // socket.on("connect", () => displayMessage(`Connected with id: ${socket.id}`))
 
-socket.on("recieve-message", chatMessage => {
-    displayMessage(chatMessage);
-})
+// socket.on("recieve-message", chatMessage => {
+//     displayMessage(chatMessage);
+// })
 
 chatForm.addEventListener("submit", event => {
     event.preventDefault();
