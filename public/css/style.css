@@ -188,14 +188,15 @@ body {
 }
 
 .userInfo {
-  background: lightgray;
   color: black;
   left: 0;
   height: 7em;
+  background-color: rgba(182, 174, 174, 0.8);
 }
 
 .userInfo h1 {
   margin-left: 21%;
+  
 }
 
 #profileStory {
@@ -307,4 +308,7 @@ body {
 .sign_in {
   font-weight: bolder;
   font-size: 50px;
+}
+#profile-story {
+  text-align: center;
 }
