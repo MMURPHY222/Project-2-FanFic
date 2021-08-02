@@ -32,6 +32,18 @@ All Story View Page
 Single story
 ![LogIn](./public/img/single-story-view.png)
 
+## How to install
+
+```md
+npm install
+```
+
+## How to start
+
+```
+npm start
+```
+
 ## Technologies Used
 
 ```md
@@ -48,67 +60,4 @@ This app allows users to securely create a profile with a username email and pas
 
 ```md
 We used MVC structure to organize this site. We created models for user, story, and comments. We also used handlebars as a template to render the front end, and partials to dynamically generate story cards. We use get and post routes to render pages and put information to the database.
-```
-
-## Models
-
-```javascript
-class User extends Model {
-  checkPassword(loginPw) {
-    return bcrypt.compareSync(loginPw, this.password);
-  }
-}
-// defining columns for user table
-User.init(
-  {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
-    user_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    email: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true,
-      },
-    },
-    password: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [8, 12],
-      },
-    },
-  },
-  // adding hooks so that input passwords are hashed before being sent to database
-  {
-    hooks: {
-      beforeCreate: async (newUserData) => {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10);
-        return newUserData;
-      },
-      beforeUpdate: async (updatedUserData) => {
-        updatedUserData.password = await bcrypt.hash(
-          updatedUserData.password,
-          10
-        );
-        return updatedUserData;
-      },
-    },
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: "user",
-  }
-);
-// export for index
-module.exports = User;
 ```
