@@ -9,7 +9,7 @@ const chatForm = document.querySelector("#chat-form");
 
 // const socket = io('http://localhost:3001');
 
-
+// socket.on("connect", () => displayMessage(`Connected with id: ${socket.id}`))
 
 chatForm.addEventListener("submit", event => {
     event.preventDefault();
