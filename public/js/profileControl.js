@@ -8,7 +8,7 @@ const profileImgs = [
   "https://www.naruto-guides.com/wp-content/uploads/2019/05/naruto-uzumaki.jpg",
   "https://cbsnews1.cbsistatic.com/hub/i/r/2015/06/09/56a5c461-f85d-4622-b021-f6f20a3618bc/thumbnail/1200x630/cbd370c5256b07b5f42fef1db1f841b7/ppgkeyartpr2016.jpg"
 ]
-
+let c = 1
 if (
   window.location.pathname === "/profile"
 ) {
