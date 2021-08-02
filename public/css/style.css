@@ -34,6 +34,7 @@ body {
   color: #fcf4eb;
   border: 1px solid rgba(182, 174, 174, 0.8);
   border-radius: 1em;
+  text-align: center;
 }
 
 .myNav {
@@ -51,6 +52,8 @@ body {
 .myTextarea {
   margin-bottom: 10px;
 }
+
+
 
 .darkMode {
   background: #646669;
@@ -203,6 +206,8 @@ body {
 #message-story {
   padding-bottom: 15px;
   margin-bottom: 4em;
+  max-width: 80%;
+  margin: auto;
 }
 .myButton {
   margin-left: 3em;
@@ -222,4 +227,14 @@ body {
 
 #writeStory {
   margin-bottom: 3em;
+}
+#centerStory {
+  border-bottom: #484649;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  padding-bottom: 5px;
+}
+#login-submit {
+  font-family: "Cinzel Decorative", cursive;
+  font-weight: 700;
 }
