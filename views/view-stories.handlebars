@@ -1,4 +1,6 @@
 <section id = "background">
+   
+   {{!-- Navbar starts --}}
     <nav class="navbar myNav" id = "navId" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
          <h1 class ="myLogo">OnlyFanFics</h1>
@@ -36,12 +38,14 @@
           </div>
         </div>
       </nav>
+      {{!-- Navbar ends --}}
       </section>
-    
+    {{!-- rendering each story according to story details partial --}}
 <div class="story-container myStoryContainer">
   {{#each stories as |story|}}
   {{>stories-details}}
   {{/each}}
   
 </div>
+{{!--fetch call for logout file link  --}}
 <script src="/js/logout.js"></script>
