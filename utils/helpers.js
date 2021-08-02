@@ -1,7 +1,15 @@
+// const { io } = require("socket.io-client");
+
+const { Socket } = require("socket.io-client");
+
 const enterButton = document.querySelector("#enter-button");
 const chatInput = document.querySelector("#chat-input");
 const sessionInput = document.querySelector("#session-input");
 const chatForm = document.querySelector("#chat-form");
+
+// const socket = io('http://localhost:3001');
+
+
 
 chatForm.addEventListener("submit", event => {
     event.preventDefault();
