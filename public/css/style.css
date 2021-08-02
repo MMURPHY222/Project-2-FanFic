@@ -1,3 +1,4 @@
+/* Global styles */
 html {
   height: 100%;
 }
@@ -52,6 +53,11 @@ body {
   align-items: center;
   font-weight: bold;
   letter-spacing: 0.2em;
+  transition: .5s;
+}
+.myLogo:hover {
+  color: crimson;
+  transition: .5s;
 }
 
 .myTextarea {
@@ -123,7 +129,12 @@ body {
 .myMessage {
   width: 30%;
   height: fit-content;
-  margin: 5%;
+  margin: 3%;
+  transition: .3s;
+}
+.myMessage:hover {
+  transform: translatey(-10px);
+  transition: .3s;
 }
 
 .myOtherNav {
@@ -218,34 +229,47 @@ body {
 .myButton {
   margin-left: 3em;
 }
+/* style for plus in new story button */
 #plus {
   font-size: 2em;
   margin-left: -5px;
   margin-right: 5px;
 }
+/* shifting comment submit button */
 .submit-button {
   margin-top: 5px;
   margin-bottom: -10px;
 }
+/* style to control comment bubble width */
 .myCommentBody {
   width: fit-content;
 }
-
+/* styling to shift post button in write stories page */
 #writeStory {
   margin-bottom: 3em;
 }
+/* styling for story boc in single story view page */
 #centerStory {
   border-bottom: #484649;
   border-bottom-style: solid;
   border-bottom-width: 2px;
   padding-bottom: 5px;
 }
+/* style for all submit buttons to have correct font */
 #login-submit {
   font-family: "Cinzel Decorative", cursive;
   font-weight: 700;
 }
+/* styles for new story button */
+#myNewStory {
+  transition: .3s;
+}
 #myNewStory:hover {
-  background-color: rgb(228, 228, 228);
+  background-color: rgb(242, 242, 242);
   color: #2e2e2e;
   transition: .3s;
+}
+.sign_in {
+  font-weight: bolder;
+  font-size: 50px;
 }
