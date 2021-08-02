@@ -5,16 +5,16 @@ require('dotenv').config({ path: path.resolve(__dirname, '../../.env') });
 const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-        user: process.env.EM_EMAIL,
-        pass: process.env.EM_PASS
+        user: "onlyfanficsgt@gmail.com",
+        pass: "!Pass12345"
     }
 });
 
 const options = {
-    from: process.env.EM_EMAIL,
+    from: "onlyfanficsgt@gmail.com",
     to: process.env.TEST_EMAIL,
-    subject: "This is a test email from Node JS.",
-    text: "Hopefully this works!"
+    subject: "Welcome {USER}",
+    text: "Dear {USER},\n\nYou have successfully signed up for OnlyFanFics!\n\nWe look forward to having you in our community!\n\nYours Sincerely,\nThe OnlyFanFics Team"
 }
 
 transporter.sendMail(options, (err, info) => {
