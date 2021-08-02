@@ -1,7 +1,7 @@
-const enterButton = document.querySelector("enter-button");
-const chatInput = document.querySelector("chat-input");
-const sessionInput = document.querySelector("session-input");
-const chatForm = document.querySelector("chat-form");
+const enterButton = document.querySelector("#enter-button");
+const chatInput = document.querySelector("#chat-input");
+const sessionInput = document.querySelector("#session-input");
+const chatForm = document.querySelector("#chat-form");
 
 chatForm.addEventListener("submit", event => {
     event.preventDefault();
@@ -21,3 +21,9 @@ chatForm.addEventListener("submit", event => {
 enterButton.addEventListener("click", () => {
     const session = sessionInput.value;
 });
+
+const displayChat = chatMessage => {
+    const div = document.createElement("div");
+    div.textContent = chat;
+    document.querySelector("#chat-box").append(div);
+}
