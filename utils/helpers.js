@@ -24,7 +24,7 @@ chatForm.addEventListener("submit", event => {
     } else {
         displayChat(chat);
     }
-    socket.emit('send-message', chat);
+    // socket.emit('send-message', chat);
 
     chatInput.value = "";
 });
