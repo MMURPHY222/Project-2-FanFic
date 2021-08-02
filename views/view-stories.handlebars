@@ -15,10 +15,6 @@
             <a class="navbar-item" href="/">
               Home
             </a>
-      
-            <a class="navbar-item" href="/stories">
-              View Stories
-            </a>
             <a class="navbar-item" href="/profile">
               My Profile
             </a>
@@ -28,7 +24,7 @@
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="buttons">
-                <a class="button is-dark" href="/writestory"><span id="plus">&#43;</span> New Story</a>
+                <a class="button is-dark" id="myNewStory" href="/writestory"><span id="plus">&#43;</span> New Story</a>
                 <a class="button is-light" id="logout">
                   Log Out
                 </a>
@@ -46,5 +42,6 @@
   {{#each stories as |story|}}
   {{>stories-details}}
   {{/each}}
+  
 </div>
 <script src="/js/logout.js"></script>
