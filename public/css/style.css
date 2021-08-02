@@ -229,6 +229,7 @@ body {
 #ficto-chat {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   max-width: 400px;
 }
 
@@ -236,7 +237,7 @@ body {
   width: 90%;
 }
 
-#message-box {
+#chat-box {
   border: 1px solid black;
   height: 300px;
   overflow-y: scroll;

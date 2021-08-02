@@ -24,6 +24,6 @@ enterButton.addEventListener("click", () => {
 
 const displayChat = chatMessage => {
     const div = document.createElement("div");
-    div.textContent = chat;
+    div.textContent = chatMessage;
     document.querySelector("#chat-box").append(div);
 }
