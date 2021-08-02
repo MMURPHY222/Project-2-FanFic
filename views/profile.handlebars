@@ -19,15 +19,13 @@
             <a class="navbar-item" href="/stories">
               View Stories
             </a>
-            <a class="navbar-item" href="/writestory">
-              Write Story
-            </a>
             </div>
           </div>
       
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="buttons">
+                 <a class="button is-dark" id="myNewStory" href="/writestory"><span id="plus">&#43;</span> New Story</a>
                 <a class="button is-light" id="logout">
                   Log Out
                 </a>
@@ -45,11 +43,11 @@
         
           <section class="hero is-medium" id = "background">
             <div class = "profilePhoto">
-                <img id = "profileImg"src = "https://i.pinimg.com/564x/3d/fd/d3/3dfdd3cce72f6d62c17d4fa2c595d6c9.jpg" >
+                <img id = "profileImg" src = "https://i.pinimg.com/564x/3d/fd/d3/3dfdd3cce72f6d62c17d4fa2c595d6c9.jpg" >
             </div>
          </section>
          <div class = "userInfo">
-            <h1 class = "userNameProfile">{{user_name}}</h1>
+            <h1 class = "userNameProfile">Username: <strong>{{user_name}}</strong></h1>
             <div>
              <a class="button is-dark" id = "toggleProfile">Profile Pic</a>
             </div>
@@ -61,4 +59,4 @@
 </div>
     </section>
     <script src="/js/logout.js"></script>
-    <script src = "/js/profileControl.js"></script>
+    
