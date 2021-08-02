@@ -28,7 +28,7 @@
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="buttons">
-                <a class="button is-light" href="/logout">
+                <a class="button is-light" id="logout">
                   Log Out
                 </a>
                 <a class ="button is-light" id = "toggle">
@@ -41,7 +41,7 @@
       </nav>
       </section>
 
-           <article class="message myMessage" id="message-story">
+           <article class="message" id="message-story">
   <div class="message-header">
     <p id="story-username"><div class = "storyTitle">
               {{title}}
@@ -70,12 +70,14 @@
             <div class = "textInput">
                 
                 <form class="comment-form">
-                <input id="comment-body" class="textarea" placeholder="e.g. Wow what a great story!!! =-)"></input>
+                <input id="comment-body" class="textarea" placeholder="e.g. Wow what a great story!!! =-)">
                 <button class="button is-dark submit-button" type="submit">Submit</button>
                 </form>
             </div>
   </div>
           </section>
   </article>
+  
 <script src="/js/writeComment.js"></script>
+<script src="/js/logout.js"></script>
      
