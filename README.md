@@ -52,6 +52,8 @@ We used MVC structure to organize this site. We created models for user, story, 
 
 ## Models
 
+User Model contains id, user_name, email, and password
+
 ```javascript
 class User extends Model {
   checkPassword(loginPw) {
@@ -111,4 +113,88 @@ User.init(
 );
 // export for index
 module.exports = User;
+```
+
+Comment model contains id, body, and story_id and user_id as foreign keys
+Comments must relate to both story and users
+
+```javascript
+Comment.init(
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    comment_body: {
+      type: DataTypes.STRING(1000),
+      allowNull: false,
+    },
+    story_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "story",
+        key: "id",
+      },
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "user",
+        key: "id",
+      },
+    },
+  },
+  {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: "comment",
+  }
+);
+// export for index
+module.exports = Comment;
+```
+
+Story model contains id, title, summary, story_content, user_id
+
+```javascript
+Story.init(
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    summary: {
+      type: DataTypes.STRING(1000),
+    },
+    story_content: {
+      type: DataTypes.TEXT("long"),
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "user",
+        key: "id",
+      },
+    },
+  },
+  {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: "story",
+  }
+);
+// exporting for index
+module.exports = Story;
 ```
