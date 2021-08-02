@@ -17,7 +17,12 @@ const io = require('socket.io')(3001, {
   }
 });
 
-io.on('connection', socket => console.log(socket.id))
+io.on('connection', socket => {
+  console.log(socket.id);
+  socket.on('send-message',chatMessage => {
+    socket.broadcast.emit('recieve-message', chat);
+  })
+});
 
 // Set up Handlebars.js engine with custom helpers
 const hbs = exphbs.create({ helpers });

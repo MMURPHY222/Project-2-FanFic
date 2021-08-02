@@ -11,6 +11,10 @@ const chatForm = document.querySelector("#chat-form");
 
 // socket.on("connect", () => displayMessage(`Connected with id: ${socket.id}`))
 
+socket.on("recieve-message", chatMessage => {
+    displayMessage(chatMessage);
+})
+
 chatForm.addEventListener("submit", event => {
     event.preventDefault();
 
@@ -22,6 +26,7 @@ chatForm.addEventListener("submit", event => {
     } else {
         displayChat(chat);
     }
+    socket.emit('send-message', chat);
 
     chatInput.value = "";
 });
