@@ -1,4 +1,5 @@
 <section id = "background">
+    {{!-- Navbar start --}}
     <nav class="navbar myNav" id = "navId" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
          <h1 class ="myLogo">OnlyFanFics</h1>
@@ -39,8 +40,9 @@
           </div>
         </div>
       </nav>
+      {{!-- Navbar ends --}}
       </section>
-
+{{!-- story display start --}}
            <article class="message" id="message-story">
   <div class="message-header">
     <p id="story-username"><div class = "storyTitle">
@@ -55,7 +57,8 @@
                 <p>by <strong>{{user.user_name}}</strong></p>
           </div>
   </div>
-
+  {{!-- story display stops --}}
+{{!-- generating comments from database --}}
   <div class="comment-container">
     {{#each comments as |comment|}}
     {{>comments-details}}
@@ -68,7 +71,7 @@
                 Leave a Comment
             </p>
             <div class = "textInput">
-                
+                {{!--new comment form  --}}
                 <form class="comment-form">
                 <input id="comment-body" class="textarea" placeholder="e.g. Wow what a great story!!! =-)">
                 <button class="button is-dark submit-button" id="login-submit" type="submit">Post</button>
@@ -77,7 +80,8 @@
   </div>
           </section>
   </article>
-  
+  {{!-- write comment linking to java script fetch call to post new comment --}}
 <script src="/js/writeComment.js"></script>
+{{!-- fetch call for logout file link --}}
 <script src="/js/logout.js"></script>
      
