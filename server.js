@@ -6,6 +6,7 @@ const routes = require('./controllers');
 const helpers = require('./utils/helpers');
 
 const sequelize = require('./config/connection');
+const { callbackPromise } = require('nodemailer/lib/shared');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 // use available port or 3001
 const app = express();

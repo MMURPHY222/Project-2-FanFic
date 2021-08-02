@@ -249,7 +249,42 @@ body {
 #writeStory {
   margin-bottom: 3em;
 }
-/* styling for story boc in single story view page */
+
+/* CHAT STUFF AFTER THIS LINE */
+
+/* #ficto-chat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 400px;
+}
+
+#chat-form {
+  width: 90%;
+}
+
+#chat-box {
+  border: 1px solid black;
+  height: 300px;
+  overflow-y: scroll;
+}
+
+.chat-labels {
+  padding-right: 10px;
+}
+
+.chat-inputs {
+  height: 1.5rem;
+  padding: none;
+}
+
+.chat-buttons {
+  width: 70px;
+  color: white;
+  background-color: black;
+  border: none;
+  height: 1.85rem;
+} */
 #centerStory {
   border-bottom: #484649;
   border-bottom-style: solid;

@@ -19,7 +19,7 @@ const signupFormHandler = async (event) => {
         alert(response.statusText);
       }
     }
-  };
+ };
 
 // event listener on submit 
 document
