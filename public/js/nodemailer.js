@@ -2,6 +2,8 @@ const nodemailer = require('nodemailer');
 const path = require('path');
 require('dotenv').config({ path: path.resolve(__dirname, '../../.env') });
 
+const signupForm = document.querySelector("#signup-form");
+
 const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -23,3 +25,8 @@ transporter.sendMail(options, (err, info) => {
 
     console.log("Email successfully sent: " + info?.response);
 });
+
+signupForm.addEventListener("submit", event => {
+    event.stopPropagation();
+    console.log("You have successfully signed up for an account");
+})

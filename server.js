@@ -12,26 +12,6 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-const io = require('socket.io')(3001, {
-  cors: {
-    origin: ['http://localhost:5500']
-  }
-});
-
-io.on('connection', socket => {
-  
-  socket.on('send-message',(chatMessage, room) => {
-    room === "" 
-    ? socket.broadcast.emit('recieve-message', chat)
-    : socket.to(room);
-  });
-
-  socket.on('join-session', (session, callBack) => {
-    socket.join(session);
-    callBack(`Joined ${session}`);
-  })
-});
-
 // Set up Handlebars.js engine with custom helpers
 const hbs = exphbs.create({ helpers });
 
